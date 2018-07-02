@@ -4,7 +4,7 @@
 #
 Name     : R-fBonds
 Version  : 3042.78
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/fBonds_3042.78.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fBonds_3042.78.tar.gz
 Summary  : Rmetrics - Pricing and Evaluating Bonds
