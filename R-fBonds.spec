@@ -4,7 +4,7 @@
 #
 Name     : R-fBonds
 Version  : 3042.78
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/fBonds_3042.78.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fBonds_3042.78.tar.gz
 Summary  : Rmetrics - Pricing and Evaluating Bonds
@@ -17,28 +17,28 @@ BuildRequires : R-fBasics
 BuildRequires : R-timeDate
 BuildRequires : R-timeSeries
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 term structures.
 
 %prep
 %setup -q -c -n fBonds
+cd %{_builddir}/fBonds
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571828061
+export SOURCE_DATE_EPOCH=1589584696
 
 %install
-export SOURCE_DATE_EPOCH=1571828061
+export SOURCE_DATE_EPOCH=1589584696
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
